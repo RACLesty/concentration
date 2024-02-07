@@ -14,6 +14,7 @@ function runGame() {
 }
 
 function shuffleCards() {
+    symbolsList.sort(() => Math.random() - .5)
     cardEl.forEach((card, idx) => {
         card.textContent = symbolsList[idx];
     })
