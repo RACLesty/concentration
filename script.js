@@ -99,6 +99,7 @@ function restartGame() {
     move = false;
     matchedCount = 0;
     outcomeMsgEl.textContent = '';
+    timerEl.textContent = '';
     shuffleCards();
     cardEl.forEach(card => {
         card.classList.remove('flipped', 'matched');
