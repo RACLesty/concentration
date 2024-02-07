@@ -19,20 +19,30 @@ h1 {
     grid-template-columns: repeat(4, auto);
     width: 500px;
     height: 500px;
-    border: solid 1px black;
-    font-size: 50px;
-    text-align: center;
+    border: solid 5px black;
 }
 
 .card {
     margin: 23.5px;
     width: 75px;
     height: 115px;
-    border: solid 1px black;
+    border: solid 2px black;
+    font-size: 50px;
+    text-align: center;
+    cursor: pointer;
 }
 
 button {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 15px;
+}
+
+.card.flipped {
+    color: black;
+    background-color: white;
+}
+
+.card.matched {
+    background-color: red;
 }
