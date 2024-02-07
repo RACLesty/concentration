@@ -79,16 +79,26 @@ function startTimer() {
         timerEl.textContent = `Time Left: ${timerLeft} seconds`;
         timerLeft--;
         if (timerLeft < 0) {
-            clearInterval(timerInterval)
+            clearInterval(timerInterval);
+            endGame();
         }
     }, 1000);
+}
 
+function endGame() {
+    outcomeMsgEl.textContent = 'Sorry, you lost. Try again!';
+    cardEl.forEach(card => {
+        card.removeEventListener('click', selectCard)
+    });
+    move = true
 }
 
 function restartGame() {
     clearInterval(timerInterval);
     selectCard = [];
     move = false;
+    matchedCount = 0;
+    outcomeMsgEl.textContent = '';
     shuffleCards();
     cardEl.forEach(card => {
         card.classList.remove('flipped', 'matched');
