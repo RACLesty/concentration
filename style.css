@@ -27,9 +27,11 @@ h1 {
     width: 75px;
     height: 115px;
     border: solid 2px black;
+    background-color: black;
     font-size: 50px;
     text-align: center;
     cursor: pointer;
+    transition: transform .5s ease;
 }
 
 button {
@@ -41,8 +43,9 @@ button {
 .card.flipped {
     color: black;
     background-color: white;
+    transform:  rotateY(180deg);
 }
 
 .card.matched {
-    background-color: red;
+    background-color: green;
 }
