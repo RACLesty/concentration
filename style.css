@@ -28,3 +28,9 @@ h1 {
     height: 115px;
     border: solid 1px black;
 }
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 15px;
+}
