@@ -78,6 +78,9 @@ function startTimer() {
     timerInterval = setInterval(() => {
         timerEl.textContent = `Time Left: ${timerLeft} seconds`;
         timerLeft--;
+        if (timerLeft < 0) {
+            clearInterval(timerInterval)
+        }
     }, 1000);
 
 }
