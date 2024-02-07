@@ -12,12 +12,15 @@ let move = false;
 
 let matchedCount = 0;
 
+let timerInterval;
+
 runGame();
 
 gameCardsEl.addEventListener('click', selectCard);
 
 function runGame() {
     shuffleCards()
+    startTimer()
 }
 
 function shuffleCards() {
@@ -62,6 +65,11 @@ function checkMatch(){
 }
 
 function startTimer() {
+    let timerLeft = 30;
+    timerInterval = setInterval(() => {
+        timerEl.textContent = `Time Left: ${timerLeft} seconds`;
+        timerLeft--;
+    }, 1000);
 
 }
 
