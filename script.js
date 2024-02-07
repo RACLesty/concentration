@@ -14,9 +14,10 @@ function runGame() {
 }
 
 function shuffleCards() {
-    symbolsList.sort(() => Math.random() - .5)
+    symbolsList.sort(() => Math.random() - .5);
     cardEl.forEach((card, idx) => {
         card.textContent = symbolsList[idx];
+        card.setAttribute('data-symbol', symbolsList[idx])
     })
 }
 
