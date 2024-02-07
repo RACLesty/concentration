@@ -18,6 +18,8 @@ runGame();
 
 gameCardsEl.addEventListener('click', selectCard);
 
+btnEl.addEventListener('click', restartGame)
+
 function runGame() {
     shuffleCards()
     startTimer()
@@ -74,5 +76,12 @@ function startTimer() {
 }
 
 function restartGame() {
-
+    clearInterval(timerInterval);
+    selectCard = [];
+    move = false;
+    shuffleCards();
+    cardEl.forEach(card => {
+        card.classList.remove('flipped', 'matched');
+    });
+    startTimer();
 }
