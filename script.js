@@ -63,6 +63,11 @@ function checkMatch(){
             clearInterval(timerInterval);
             outcomeMsgEl.textContent = 'Congratulations! You won!'
         }
+    } else {
+        setTimeout(() => {
+            card1.classList.remove('flipped');
+            card2.classList.remove('flipped');
+        }, 1000);
     }
     move = false
     selectedCards = []
