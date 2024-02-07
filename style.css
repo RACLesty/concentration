@@ -10,6 +10,10 @@ body {
     align-items: center;
 }
 
+h1 {
+    margin: 50px;
+}
+
 #cards-wrapper {
     display: grid;
     grid-template-columns: repeat(4, auto);
