@@ -9,9 +9,7 @@ const symbolsList = [...symbols, ...symbols]
 
 let selectedCards = [];
 let move = false;
-
 let matchedCount = 0;
-
 let timerInterval;
 
 runGame();
@@ -61,6 +59,10 @@ function checkMatch(){
         card1.classList.add('matched');
         card2.classList.add('matched');
         matchedCount += 2;
+        if(matchedCount === symbolsList.length) {
+            clearInterval(timerInterval);
+            outcomeMsgEl.textContent = 'Congratulations! You won!'
+        }
     }
     move = false
     selectedCards = []
