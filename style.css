@@ -28,7 +28,7 @@ h1 {
 }
 
 #outcome-msg{
-    margin: 20px 0 20px 0;
+    margin-top: 20px 0 0 0;
     font-size: 35px;
     text-shadow: 5px 5px black;
 }
@@ -40,31 +40,30 @@ h1 {
 #cards-wrapper {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    width: 500px;
+    max-width: 90%;
     height: 500px;
-    border: solid 5px yellow;
+    border: solid 3px yellow;
     user-select: none;
     background-image: url("/assets/table-top.png");
-    box-shadow:5px 5px 5px black;
+    box-shadow:3px 3px 3px black;
 }
 
 .card {
-    margin: 23.5px;
+    margin:10px;
     width: 75px;
     height: 115px;
     border: solid 2px rgb(2, 2, 234);
     border-radius: 5px;
     box-shadow:5px 5px 5px black;
-    font-size: 50px;
     text-align: center;
     cursor: pointer;
     transition: transform .5s ease;
 }
 
 button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 15px;
+    margin-top: 15px;
+    padding: 5px 10px;
+    font-size: 12px;
     font-family: 'Pokemon Solid', sans-serif;
     color: blue;
     background-color: yellow;
@@ -109,4 +108,26 @@ button {
 [data-symbol='O']{
     background-image: url('/assets/Pikachu.png');
     background-size: cover;
+}
+
+@media screen and (max-with: 600px) {
+    h1 {
+        font-size: 20px;
+    }
+    #timer {
+        font-size: 15px;
+    }
+    #outcome-msg {
+        font-size: 20px;
+    }
+    #cards-wrapper{
+        height: 300px;
+    }
+    .card {
+        width: 50px;
+        height: 80px;
+    }
+    button {
+        font-size: 10px;
+    }
 }
