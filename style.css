@@ -13,7 +13,23 @@ body {
 }
 
 h1 {
-    margin: 50px;
+    margin: 30px;
+    font-family: 'Pokemon Solid', sans-serif;
+    color: yellow;
+}
+
+#timer{
+    color: yellow;
+    margin-bottom: 20px;
+}
+
+#outcome-msg{
+    margin: 20px 0 20px 0;
+    font-size: 35px;
+}
+
+#timer, #outcome-msg {
+    font-family: 'Pokemon Solid', sans-serif;
 }
 
 #cards-wrapper {
@@ -21,7 +37,7 @@ h1 {
     grid-template-columns: repeat(4, auto);
     width: 500px;
     height: 500px;
-    border: solid 5px black;
+    border: solid 5px yellow;
     user-select: none;
     background-image: url("/assets/table-top.png");
 }
@@ -42,6 +58,9 @@ button {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 15px;
+    font-family: 'Pokemon Solid', sans-serif;
+    color: blue;
+    background-color: yellow;
 }
 
 .card.flipped {
