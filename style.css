@@ -110,7 +110,7 @@ button {
     background-size: cover;
 }
 
-@media screen and (max-with: 600px) {
+@media screen and (max-with: 625px) {
     h1 {
         font-size: 1px;
     }
@@ -121,7 +121,7 @@ button {
         font-size: 1px;
     }
     #cards-wrapper{
-        height: 300px;
+        height: 325px;
     }
     .card {
         width: 12.5px;
