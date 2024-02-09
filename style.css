@@ -112,20 +112,20 @@ button {
 
 @media screen and (max-with: 600px) {
     h1 {
-        font-size: 20px;
+        font-size: 10px;
     }
     #timer {
-        font-size: 15px;
+        font-size: 5px;
     }
     #outcome-msg {
-        font-size: 20px;
+        font-size: 8px;
     }
     #cards-wrapper{
         height: 300px;
     }
     .card {
-        width: 50px;
-        height: 80px;
+        width: 45px;
+        height: 75px;
     }
     button {
         font-size: 10px;
