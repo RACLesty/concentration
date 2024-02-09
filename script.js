@@ -65,6 +65,8 @@ function checkMatch(){
         if(matchedCount === symbolsList.length) {
             clearInterval(timerInterval);
             outcomeMsgEl.textContent = 'Congratulations! You won!'
+            outcomeMsgEl.style.color = 'green'
+           
         }
     } else {
         gameCardsEl.removeEventListener('click', selectCard)
@@ -86,6 +88,8 @@ function startTimer() {
         if (timerLeft < 0) {
             clearInterval(timerInterval);
             outcomeMsgEl.textContent = 'Sorry, you lost. Try again!';
+            outcomeMsgEl.style.color = 'red';
+            outcomeMsgEl.
             cardEl.forEach(card => {
                 card.removeEventListener('click', selectCard)
             });
