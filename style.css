@@ -21,6 +21,7 @@ h1 {
     height: 500px;
     border: solid 5px black;
     user-select: none;
+    background-image: url("/assets/table-top.png");
 }
 
 .card {
@@ -29,7 +30,6 @@ h1 {
     height: 115px;
     border: solid 2px black;
     border-radius: 5px;
-    background-color: black;
     font-size: 50px;
     text-align: center;
     cursor: pointer;
@@ -43,11 +43,41 @@ button {
 }
 
 .card.flipped {
-    color: black;
-    background-color: white;
+    background-image: url('/assets/poke-front.png');
+    background-size: cover;
     transform:  rotateY(180deg);
 }
 
 .card.matched {
     background-color: green;
+}
+
+[data-symbol='X']{
+    background-image: url('/assets/Lugia.png');
+    background-size: cover;
+}
+
+[data-symbol='*']{
+    background-image: url('/assets/Blastoise.png');
+    background-size: cover;
+}
+
+[data-symbol='$']{
+    background-image: url('/assets/Charizard.png');
+    background-size: cover;
+}
+
+[data-symbol='=']{
+    background-image: url('/assets/Mew.png');
+    background-size: cover;
+}
+
+[data-symbol='+']{
+    background-image: url('/assets/Mewtwo.png');
+    background-size: cover;
+}
+
+[data-symbol='O']{
+    background-image: url('/assets/Pikachu.png');
+    background-size: cover;
 }

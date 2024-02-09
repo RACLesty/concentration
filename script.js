@@ -26,8 +26,11 @@ function runGame() {
 function shuffleCards() {
     symbolsList.sort(() => Math.random() - .5);
     cardEl.forEach((card, idx) => {
-        card.textContent = symbolsList[idx];
-        card.setAttribute('data-symbol', symbolsList[idx])
+        card.setAttribute('data-symbol', symbolsList
+        [idx])
+        cardEl.forEach((card) => {
+           card.classList.add('flipped')
+        })
     })
 }
 
@@ -48,7 +51,7 @@ function selectCard(event) {
 }
 
 function flipCard(card) {
-    card.classList.add('flipped')
+    card.classList.remove('flipped')
 }
 
 function checkMatch(){
@@ -66,8 +69,8 @@ function checkMatch(){
     } else {
         gameCardsEl.removeEventListener('click', selectCard)
         setTimeout(() => {
-            card1.classList.remove('flipped');
-            card2.classList.remove('flipped');
+            card1.classList.add('flipped');
+            card2.classList.add('flipped');
             gameCardsEl.addEventListener('click', selectCard)
         }, 1000);
     }
