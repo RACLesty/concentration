@@ -42,8 +42,8 @@ function selectCard(event) {
     flipCard(clickedCard)
     selectedCards.push(clickedCard);
     if (selectedCards.length ===2) {
-        move = true
-        checkMatch()
+        move = true;
+        checkMatch();
     }
 }
 
@@ -64,9 +64,11 @@ function checkMatch(){
             outcomeMsgEl.textContent = 'Congratulations! You won!'
         }
     } else {
+        gameCardsEl.removeEventListener('click', selectCard)
         setTimeout(() => {
             card1.classList.remove('flipped');
             card2.classList.remove('flipped');
+            gameCardsEl.addEventListener('click', selectCard)
         }, 1000);
     }
     move = false
@@ -80,29 +82,23 @@ function startTimer() {
         timerLeft--;
         if (timerLeft < 0) {
             clearInterval(timerInterval);
-            endGame();
+            outcomeMsgEl.textContent = 'Sorry, you lost. Try again!';
+            cardEl.forEach(card => {
+                card.removeEventListener('click', selectCard)
+            });
+            move = true
         }
     }, 1000);
 }
 
-function endGame() {
-    outcomeMsgEl.textContent = 'Sorry, you lost. Try again!';
-    cardEl.forEach(card => {
-        card.removeEventListener('click', selectCard)
-    });
-    move = true
-}
-
 function restartGame() {
     clearInterval(timerInterval);
-    selectCard = [];
     move = false;
     matchedCount = 0;
     outcomeMsgEl.textContent = '';
     timerEl.textContent = '';
-    shuffleCards();
     cardEl.forEach(card => {
         card.classList.remove('flipped', 'matched');
     });
-    startTimer();
+    runGame()
 }
