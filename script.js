@@ -64,9 +64,9 @@ function checkMatch(){
         matchedCount += 2;
         if(matchedCount === symbolsList.length) {
             clearInterval(timerInterval);
-            outcomeMsgEl.textContent = 'Congratulations! You won!'
-            outcomeMsgEl.style.color = 'green'
-           
+            gameCardsEl.removeEventListener('click', selectCard);
+            outcomeMsgEl.textContent = 'Congratulations! You won!';
+            outcomeMsgEl.style.color = 'green';
         }
     } else {
         gameCardsEl.removeEventListener('click', selectCard)
@@ -87,12 +87,8 @@ function startTimer() {
         timerLeft--;
         if (timerLeft < 0) {
             clearInterval(timerInterval);
-            outcomeMsgEl.textContent = 'Sorry, you lost. Try again!';
+            outcomeMsgEl.textContent = 'Sorry, you lost! Try again!';
             outcomeMsgEl.style.color = 'red';
-            outcomeMsgEl.
-            cardEl.forEach(card => {
-                card.removeEventListener('click', selectCard)
-            });
             move = true
         }
     }, 1000);
