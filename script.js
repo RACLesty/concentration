@@ -96,6 +96,7 @@ function startTimer() {
 
 function restartGame() {
     clearInterval(timerInterval);
+    gameCardsEl.addEventListener('click', selectCard);
     move = false;
     matchedCount = 0;
     outcomeMsgEl.textContent = '';

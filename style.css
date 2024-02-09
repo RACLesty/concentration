@@ -15,6 +15,7 @@ body {
 h1 {
     margin: 30px;
     font-family: 'Pokemon Solid', sans-serif;
+    font-size: 50px;
     color: yellow;
     text-shadow: 5px 5px black;
 }
@@ -22,6 +23,7 @@ h1 {
 #timer{
     color: yellow;
     margin-bottom: 20px;
+    font-size: 30px;
     text-shadow: 3px 3px black;
 }
 
