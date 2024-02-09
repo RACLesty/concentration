@@ -111,6 +111,12 @@ button {
 }
 
 @media screen and (max-with: 625px) {
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
     h1 {
         font-size: 1px;
     }
@@ -121,6 +127,7 @@ button {
         font-size: 1px;
     }
     #cards-wrapper{
+        display: grid;
         height: 325px;
     }
     .card {
