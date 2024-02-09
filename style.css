@@ -16,16 +16,19 @@ h1 {
     margin: 30px;
     font-family: 'Pokemon Solid', sans-serif;
     color: yellow;
+    text-shadow: 5px 5px black;
 }
 
 #timer{
     color: yellow;
     margin-bottom: 20px;
+    text-shadow: 3px 3px black;
 }
 
 #outcome-msg{
     margin: 20px 0 20px 0;
     font-size: 35px;
+    text-shadow: 5px 5px black;
 }
 
 #timer, #outcome-msg {
@@ -40,6 +43,7 @@ h1 {
     border: solid 5px yellow;
     user-select: none;
     background-image: url("/assets/table-top.png");
+    box-shadow:5px 5px 5px black;
 }
 
 .card {
@@ -48,6 +52,7 @@ h1 {
     height: 115px;
     border: solid 2px rgb(2, 2, 234);
     border-radius: 5px;
+    box-shadow:5px 5px 5px black;
     font-size: 50px;
     text-align: center;
     cursor: pointer;
@@ -61,6 +66,7 @@ button {
     font-family: 'Pokemon Solid', sans-serif;
     color: blue;
     background-color: yellow;
+    box-shadow:5px 5px 5px black;
 }
 
 .card.flipped {

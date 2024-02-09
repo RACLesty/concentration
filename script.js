@@ -66,7 +66,7 @@ function checkMatch(){
             clearInterval(timerInterval);
             gameCardsEl.removeEventListener('click', selectCard);
             outcomeMsgEl.textContent = 'Congratulations! You won!';
-            outcomeMsgEl.style.color = 'green';
+            outcomeMsgEl.style.color = 'greenyellow';
         }
     } else {
         gameCardsEl.removeEventListener('click', selectCard)
