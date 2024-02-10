@@ -83,7 +83,7 @@ function checkMatch(){
 function startTimer() {
     let timerLeft = 30;
     timerInterval = setInterval(() => {
-        timerEl.textContent = `Time Left: ${timerLeft} seconds`;
+        timerEl.textContent = 'Time left:' + timerLeft + ' seconds';
         timerLeft--;
         if (timerLeft < 0) {
             clearInterval(timerInterval);
