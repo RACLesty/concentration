@@ -38,7 +38,7 @@ dynamically, while functions organize the code for clarity and maintainability.
 
 ## Links to Wireframe and Game
 
- Netlify[Pokemon Memory](https://raclesty.github.io/concentration/)
+[Pokemon Memory](https://raclesty.github.io/concentration/)
 
 [Wireframe](https://excalidraw.com/#room=0cd7242987147ce95e44,y9xskMlR50j2VRT_cfM9QA)
 
