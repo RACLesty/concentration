@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("./assets/floor.png");
+    background-image: url("/assets/floor.png");
     
 }
 
